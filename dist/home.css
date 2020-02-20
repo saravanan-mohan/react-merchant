@@ -147,6 +147,43 @@ header nav ul li:hover {
   }
 }
 
+#topCarousel .carousel-wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+#topCarousel .carousel-wrapper .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #CDCDCD;
+}
+#topCarousel .carousel-wrapper .carousel-item.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade 1.5s;
+}
+#topCarousel .carousel-wrapper .carousel-item.show span {
+  margin: 5px;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+}
+#topCarousel .carousel-wrapper .carousel-item .arrow {
+  font-weight: bold;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #product {
   background-color: #FFFFFF;
   display: flex;
@@ -307,7 +344,7 @@ header nav ul li:hover {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #3db0f7;
+  background-color: #EBEBEB;
   border-radius: 50%;
 }
 #experience .round-progress ul li .progress-container .ring-mask {
@@ -320,7 +357,13 @@ header nav ul li:hover {
   align-items: center;
 }
 #experience .round-progress ul li .progress-container .progress-indicator {
-  background-color: #EBEBEB;
+  background-color: #3db0f7;
+}
+#experience .round-progress ul li .progress-container .progress-indicator:nth-child(2) {
+  clip: rect(50px, 100px, 100px, 0px);
+}
+#experience .round-progress ul li .progress-container .progress-indicator:nth-child(3) {
+  clip: rect(0px, 100px, 100px, 50px);
 }
 #experience .round-progress ul li .progress-title {
   margin-top: 20px;
